@@ -20,7 +20,6 @@ class Person extends BaseModel
 
     public function rawValidation(string $cpf, array $answers)
     {
-        $this->endpoint = "validate/pf-face";
         $data = $this->mountDataArray($cpf, $answers);
         return $this->send($data);
     }
